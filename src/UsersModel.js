@@ -31,9 +31,10 @@ function register(user) {
 }
 
 function login(info) {
-  users.filter((user) => {
+  users.find((user, index) => {
+    //console.log(user);
     if (info.name === user.name && info.password === user.password) {
-      console.log("welcome message");
+      console.log(user);
     } else {
       console.log("wrong info");
     }
